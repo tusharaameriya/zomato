@@ -24,11 +24,15 @@
                         aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-                    <a class="navbar-brand text-white fs-6" href="#">Get the app</a>
+                    <a class="navbar-brand text-white fs-6 get-app" href="#"> <i class="fa fa-mobile"
+                            aria-hidden="true"></i> Get the app</a>
 
                     <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
                         <ul class="navbar-nav me-5 mb-2 mb-lg-0">
-                            <li class="nav-item fs-5">
+                            <a class="navbar-brand text-white fs-6 get-app2" href="#"> <i class="fa fa-mobile"
+                                    aria-hidden="true"></i> Get the app</a>
+
+                            <li class="nav-item fs-5 ">
                                 <a class="nav-link  text-white" aria-current="page" href="#">Investor Relations</a>
                             </li>
                             <li class="nav-item ms-3 fs-5">
@@ -36,24 +40,20 @@
                             </li>
 
                             <li class="nav-item ms-3 fs-5">
-                                <a class="nav-link text-white" data-bs-toggle="modal" data-bs-target="#exampleModal"
-                                    href="#" tabindex="-1" aria-disabled="true">Log in</a>
+                                <a class="nav-link text-white" data-bs-toggle="modal" data-bs-target="#login" href="#"
+                                    tabindex="-1" aria-disabled="true">Log in</a>
                             </li>
                             <li class="nav-item ms-3 fs-5">
-                                <a class="nav-link text-white" href="#" tabindex="-1" aria-disabled="true">Sign up</a>
+                                <a class="nav-link text-white" data-bs-toggle="modal" data-bs-target="#signup" href="#"
+                                    tabindex="-1" aria-disabled="true">Sign up</a>
                             </li>
                         </ul>
 
                     </div>
                 </div>
             </nav>
-            <!-- form -->
-            <!-- Button trigger modal -->
-
-
-            <!-- Modal -->
-            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-                aria-hidden="true">
+            <!-- login -->
+            <div class="modal fade" id="login" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
@@ -61,18 +61,90 @@
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                            <form action="">
-                                <input class="form-control input-login" type="text">
+                            <form action="" class="mt-2">
+                                <div class="container">
+                                    <input class="form-control input-login" type="text" placeholder="Phone">
+                                    <button class="btn btn-danger send-otp-button form-control mt-4">Send one time
+                                        password</button>
+                                    <div class="line-with-text">
+                                        <span>or</span>
+                                    </div>
+                                    <div class="email-box rounded text-center">
+                                        <a class="text-decoration-none text-dark" href=""> <span class="text-danger"><i
+                                                    class="bi bi-envelope-fill"></i></span> &nbsp; Continue with
+                                            Email</a>
+                                    </div>
+                                    <div class="email-box rounded text-center mt-4 mb-4">
+                                        <a class="text-decoration-none google-text text-dark" href=""> <span
+                                                class="text-danger"><img src="assest/img/images.png" width="30"
+                                                    alt=""></span>
+                                            Sign in with google </a>
+                                    </div>
+                                </div>
                             </form>
+
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary">Save changes</button>
+                            <div class="container">
+                                <p>New to Zomato? <span class="text-danger">Create account</span></p>
+
+
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- form -->
+            <!-- login -->
+
+            <!-- Sigup -->
+            <div class="modal fade" id="signup" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h3 class="modal-title text-secondary" id="exampleModalLabel">Sign up </h3>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form action="" class="mt-2">
+                                <div class="container">
+                                    <input class="form-control input-login" type="text" placeholder="Full Name">
+                                    <input class="form-control input-login mt-4" type="text" placeholder="Email">
+                                    <div class="d-flex">
+                                        <input class="check-box " type="checkbox">
+                                        <p class="singup-content mt-4 ms-2">I agree to Zomato's <span
+                                                class="text-danger"> Terms of Service Privacy Policy </span> and <br>
+                                            <span class="text-danger"> Content Policies</span>
+                                        </p>
+                                    </div>
+                                    <button class="btn btn-danger send-otp-button form-control mt-1">
+                                        Create account
+                                    </button>
+                                    <div class="line-with-text">
+                                        <span>or</span>
+                                    </div>
+                                    <div class="email-box rounded text-center mt-2 mb-3">
+                                        <a class="text-decoration-none google-text text-dark" href=""> <span
+                                                class="text-danger"><img src="assest/img/images.png" width="30"
+                                                    alt=""></span>
+                                            Sign in with google </a>
+                                    </div>
+                                    <!-- <hr class="mt-4"> -->
+                                </div>
+                            </form>
+
+                        </div>
+                        <div class="modal-footer">
+                            <div class="container">
+                                <p class="fs-5">Already have an account <span class="text-danger">Login in</span></p>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Sigup -->
+
 
             <div class="logo pt-5">
                 <img class="d-block mx-auto" src="assest/img/logo.png" alt="zomato" width="300">
@@ -99,7 +171,7 @@
                             <div class="col-lg-8">
                                 <div class="row">
                                     <div class="col-lg-2 pt-2">
-                                        <i class="bi bi-search ms-5 text-secondary fs-5"></i>
+                                        <i class="bi bi-search  text-secondary fs-5"></i>
                                     </div>
                                     <div class="col-lg-8 pt-2">
                                         <input class="w-100" type="search"
@@ -156,7 +228,8 @@
         <div class="row">
             <div class="col-lg-9 mt-4">
                 <h1>Collections</h1>
-                <p class="fs-5">Explore curated lists of top restaurants, cafes, pubs, and bars in Jaipur, based on
+                <p class="fs-5 collections-content-responsive">Explore curated lists of top restaurants, cafes, pubs,
+                    and bars in Jaipur, based on
                     trends</p>
             </div>
             <div class="col-lg-3 mt-5 responsive-box">
@@ -227,153 +300,219 @@
     </div>
     <!-- section -->
     <div class="container">
-        <div class="row">
-            <div class="col-lg-4  mt-4 rounded">
-                <div class="card card5 box-shdow">
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <h4 class="mt-2 ms-3 heading6">C Scheme</h4>
-                            <p class="ms-3">309 places</p>
+        <div class="row" id="box-container">
+            <!-- Existing boxes -->
+            <div class="col-lg-4 col-sm-12 mt-4 rounded">
+                <div class="card card5 box-shadow">
+                    <div class="d-flex">
+                        <div>
+                            <h4 class="mt-2 ms-2 heading6">C Scheme</h4>
+                            <p class="ms-2">309 places</p>
                         </div>
-                        <div class="col-lg-6 mt-4">
-                            <span class="ms-5 ps-5"><i class="fa fa-angle-right fs-5 mt-2"
-                                    aria-hidden="true"></i></span>
-
+                        <div class="ms-auto">
+                            <i class="fa fa-angle-right fs-5 mt-4 me-2" aria-hidden="true"></i>
                         </div>
                     </div>
-
                 </div>
             </div>
-            <div class="col-lg-4 mt-4  rounded">
-                <div class="card card5 box-shdow">
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <h4 class="mt-2 ms-3 heading6">C Scheme</h4>
-                            <p class="ms-3">309 places</p>
+            <div class="col-lg-4 col-sm-12 mt-4 rounded">
+                <div class="card card5 box-shadow">
+                    <div class="d-flex">
+                        <div>
+                            <h4 class="mt-2 ms-2 heading6">C Scheme</h4>
+                            <p class="ms-2">309 places</p>
                         </div>
-                        <div class="col-lg-6 mt-4">
-                            <span class="ms-5 ps-5"><i class="fa fa-angle-right fs-5 mt-2"
-                                    aria-hidden="true"></i></span>
-
+                        <div class="ms-auto">
+                            <i class="fa fa-angle-right fs-5 mt-4 me-2" aria-hidden="true"></i>
                         </div>
                     </div>
-
                 </div>
             </div>
-            <div class="col-lg-4  mt-4 rounded">
-                <div class="card card5 box-shdow">
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <h4 class="mt-2 ms-3 heading6">C Scheme</h4>
-                            <p class="ms-3">309 places</p>
+            <div class="col-lg-4 col-sm-12 mt-4 rounded">
+                <div class="card card5 box-shadow">
+                    <div class="d-flex">
+                        <div>
+                            <h4 class="mt-2 ms-2 heading6">C Scheme</h4>
+                            <p class="ms-2">309 places</p>
                         </div>
-                        <div class="col-lg-6 mt-4">
-                            <span class="ms-5 ps-5"><i class="fa fa-angle-right fs-5 mt-2"
-                                    aria-hidden="true"></i></span>
-
+                        <div class="ms-auto">
+                            <i class="fa fa-angle-right fs-5 mt-4 me-2" aria-hidden="true"></i>
                         </div>
                     </div>
-
                 </div>
             </div>
-            <div class="col-lg-4  rounded mt-4">
-                <div class="card card5 box-shdow">
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <h4 class="mt-2 ms-3 heading6">C Scheme</h4>
-                            <p class="ms-3">309 places</p>
+            <div class="col-lg-4 col-sm-12 mt-4 rounded">
+                <div class="card card5 box-shadow">
+                    <div class="d-flex">
+                        <div>
+                            <h4 class="mt-2 ms-2 heading6">C Scheme</h4>
+                            <p class="ms-2">309 places</p>
                         </div>
-                        <div class="col-lg-6 mt-4">
-                            <span class="ms-5 ps-5"><i class="fa fa-angle-right fs-5 mt-2"
-                                    aria-hidden="true"></i></span>
-
+                        <div class="ms-auto">
+                            <i class="fa fa-angle-right fs-5 mt-4 me-2" aria-hidden="true"></i>
                         </div>
                     </div>
-
                 </div>
             </div>
-            <div class="col-lg-4  rounded mt-4">
-                <div class="card card5 box-shdow">
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <h4 class="mt-2 ms-3 heading6">C Scheme</h4>
-                            <p class="ms-3">309 places</p>
+            <div class="col-lg-4 col-sm-12 mt-4 rounded">
+                <div class="card card5 box-shadow">
+                    <div class="d-flex">
+                        <div>
+                            <h4 class="mt-2 ms-2 heading6">C Scheme</h4>
+                            <p class="ms-2">309 places</p>
                         </div>
-                        <div class="col-lg-6 mt-4">
-                            <span class="ms-5 ps-5"><i class="fa fa-angle-right fs-5 mt-2"
-                                    aria-hidden="true"></i></span>
-
+                        <div class="ms-auto">
+                            <i class="fa fa-angle-right fs-5 mt-4 me-2" aria-hidden="true"></i>
                         </div>
                     </div>
-
                 </div>
             </div>
-            <div class="col-lg-4  rounded mt-4">
-                <div class="card card5 box-shdow">
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <h4 class="mt-2 ms-3 heading6">C Scheme</h4>
-                            <p class="ms-3">309 places</p>
+            <div class="col-lg-4 col-sm-12 mt-4 rounded">
+                <div class="card card5 box-shadow">
+                    <div class="d-flex">
+                        <div>
+                            <h4 class="mt-2 ms-2 heading6">C Scheme</h4>
+                            <p class="ms-2">309 places</p>
                         </div>
-                        <div class="col-lg-6 mt-4">
-                            <span class="ms-5 ps-5"><i class="fa fa-angle-right fs-5 mt-2"
-                                    aria-hidden="true"></i></span>
-
+                        <div class="ms-auto">
+                            <i class="fa fa-angle-right fs-5 mt-4 me-2" aria-hidden="true"></i>
                         </div>
                     </div>
-
                 </div>
             </div>
-            <div class="col-lg-4  rounded mt-4">
-                <div class="card card5 box-shdow">
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <h4 class="mt-2 ms-3 heading6">C Scheme</h4>
-                            <p class="ms-3">309 places</p>
+            <div class="col-lg-4 col-sm-12 mt-4 rounded">
+                <div class="card card5 box-shadow">
+                    <div class="d-flex">
+                        <div>
+                            <h4 class="mt-2 ms-2 heading6">C Scheme</h4>
+                            <p class="ms-2">309 places</p>
                         </div>
-                        <div class="col-lg-6 mt-4">
-                            <span class="ms-5 ps-5"><i class="fa fa-angle-right fs-5 mt-2"
-                                    aria-hidden="true"></i></span>
-
+                        <div class="ms-auto">
+                            <i class="fa fa-angle-right fs-5 mt-4 me-2" aria-hidden="true"></i>
                         </div>
                     </div>
-
                 </div>
             </div>
-            <div class="col-lg-4  rounded mt-4">
-                <div class="card card5 box-shdow">
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <h4 class="mt-2 ms-3 heading6">C Scheme</h4>
-                            <p class="ms-3">309 places</p>
+            <div class="col-lg-4 col-sm-12 mt-4 rounded">
+                <div class="card card5 box-shadow">
+                    <div class="d-flex">
+                        <div>
+                            <h4 class="mt-2 ms-2 heading6">C Scheme</h4>
+                            <p class="ms-2">309 places</p>
                         </div>
-                        <div class="col-lg-6 mt-4">
-                            <span class="ms-5 ps-5"><i class="fa fa-angle-right fs-5 mt-2"
-                                    aria-hidden="true"></i></span>
-
+                        <div class="ms-auto">
+                            <i class="fa fa-angle-right fs-5 mt-4 me-2" aria-hidden="true"></i>
                         </div>
                     </div>
-
                 </div>
             </div>
-            <div class="col-lg-4  rounded mt-4">
-                <div class="card card5 box-shdow">
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <h4 class="mt-2 ms-3 heading6">C Scheme</h4>
-                            <p class="ms-3">309 places</p>
-                        </div>
-                        <div class="col-lg-6 mt-4">
-                            <span class="ms-5 ps-5"><i class="fa fa-angle-right fs-5 mt-2"
-                                    aria-hidden="true"></i></span>
+            <!-- Repeat the above div for the required number of existing boxes -->
 
-                        </div>
+            <!-- "Show All" box -->
+            <div class="col-lg-4 col-sm-12 mt-4 rounded show-all-hover" id="show-all-container">
+                <div class="card card5 box-shadow" id="show-all-box">
+                    <div class="d-flex justify-content-center">
+                        <p class="mt-2 ms-2 fs-5 mt-4">Show All <i class="fa fa-angle-down fs-5" aria-hidden="true"></i>
+                        </p>
                     </div>
-
                 </div>
             </div>
 
+            <!-- Hidden boxes -->
+            <div class="col-lg-4 col-sm-12 mt-4 rounded hidden-box">
+                <div class="card card5 box-shadow">
+                    <div class="d-flex">
+                        <div>
+                            <h4 class="mt-2 ms-2 heading6">C Scheme</h4>
+                            <p class="ms-2">309 places</p>
+                        </div>
+                        <div class="ms-auto">
+                            <i class="fa fa-angle-right fs-5 mt-4 me-2" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-12 mt-4 rounded hidden-box">
+                <div class="card card5 box-shadow">
+                    <div class="d-flex">
+                        <div>
+                            <h4 class="mt-2 ms-2 heading6">C Scheme</h4>
+                            <p class="ms-2">309 places</p>
+                        </div>
+                        <div class="ms-auto">
+                            <i class="fa fa-angle-right fs-5 mt-4 me-2" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-12 mt-4 rounded hidden-box">
+                <div class="card card5 box-shadow">
+                    <div class="d-flex">
+                        <div>
+                            <h4 class="mt-2 ms-2 heading6">C Scheme</h4>
+                            <p class="ms-2">309 places</p>
+                        </div>
+                        <div class="ms-auto">
+                            <i class="fa fa-angle-right fs-5 mt-4 me-2" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-12 mt-4 rounded hidden-box">
+                <div class="card card5 box-shadow">
+                    <div class="d-flex">
+                        <div>
+                            <h4 class="mt-2 ms-2 heading6">C Scheme</h4>
+                            <p class="ms-2">309 places</p>
+                        </div>
+                        <div class="ms-auto">
+                            <i class="fa fa-angle-right fs-5 mt-4 me-2" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-12 mt-4 rounded hidden-box">
+                <div class="card card5 box-shadow">
+                    <div class="d-flex">
+                        <div>
+                            <h4 class="mt-2 ms-2 heading6">C Scheme</h4>
+                            <p class="ms-2">309 places</p>
+                        </div>
+                        <div class="ms-auto">
+                            <i class="fa fa-angle-right fs-5 mt-4 me-2" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-12 mt-4 rounded hidden-box">
+                <div class="card card5 box-shadow">
+                    <div class="d-flex">
+                        <div>
+                            <h4 class="mt-2 ms-2 heading6">C Scheme</h4>
+                            <p class="ms-2">309 places</p>
+                        </div>
+                        <div class="ms-auto">
+                            <i class="fa fa-angle-right fs-5 mt-4 me-2" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-12 mt-4 rounded hidden-box">
+                <div class="card card5 box-shadow">
+                    <div class="d-flex">
+                        <div>
+                            <h4 class="mt-2 ms-2 heading6">C Scheme</h4>
+                            <p class="ms-2">309 places</p>
+                        </div>
+                        <div class="ms-auto">
+                            <i class="fa fa-angle-right fs-5 mt-4 me-2" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Repeat the above div for the required number of hidden boxes -->
         </div>
+    </div>
     </div>
     <!-- section -->
 
@@ -384,33 +523,40 @@
                 <div class="col-lg-2 mt-5"></div>
                 <div class="col-lg-8  mt-5">
                     <div class="row">
-                        <div class="col-lg-4 mt-5">
+                        <div class="col-lg-4 mt-5 responsive-box-form-img">
                             <img src="assest/img/img8.avif" width="100%" alt="">
                         </div>
-                        <div class="col-lg-8">
-                            <h1>Get the Zomato app</h1>
-                            <p>We will send you a link, open it on your phone to download <br> the app</p>
-                            <form action="" class="mt-4">
-                                <input type="radio" name="contact" id="emailRadio" checked>
-                                <label for="emailRadio">Email</label>
-                                <input class="ms-5" type="radio" name="contact" id="phoneRadio">
-                                <label for="phoneRadio">Phone</label>
-
-                                <div id="emailField" class="input-field">
-                                    <input class="form-control w-75" type="email" id="emailInput" name="email"
-                                        placeholder="Email">
-
+                        <div class="col-lg-8 responsive-box-form mt-md-3 mt-sm-3 mt-3 mt-lg-0">
+                            <h1 class="text-sm-center text-lg-start text-md-center text-center">Get the Zomato app</h1>
+                            <p class="text-center text-lg-start  w-75 forn-content">We will send you a link, open it on
+                                your phone
+                                to
+                                download the
+                                app</p>
+                            <form action="" class="mt-4 mx-auto" style="max-width: 500px;">
+                                <div class="d-flex justify-content-center justify-content-lg-start">
+                                    <input type="radio" name="contact" id="emailRadio" checked>
+                                    <label for="emailRadio" class="ms-2">Email</label>
+                                    <input class="ms-5" type="radio" name="contact" id="phoneRadio">
+                                    <label for="phoneRadio" class="ms-2">Phone</label>
                                 </div>
 
-                                <div id="phoneField" class="input-field">
-                                    <input class="form-control w-75" type="tel" id="phoneInput" name=""
+                                <div id="emailField" class="input-field mt-3">
+                                    <input class="form-control w-75 mx-auto mx-lg-0" type="email" id="emailInput"
+                                        name="email" placeholder="Email">
+                                </div>
+
+                                <div id="phoneField" class="input-field mt-3">
+                                    <input class="form-control w-75 mx-auto mx-lg-0" type="tel" id="phoneInput" name=""
                                         placeholder="Phone">
-
                                 </div>
-                                <button class="btn btn-danger mt-3">Share app link</button>
-                                <p class="fw-light mt-3">Download app from</p>
 
-                                <div class="d-flex mb-5 pb-4">
+                                <button class="btn btn-danger mt-3 d-block mx-auto mx-lg-0">Share app link</button>
+
+                                <p class="fw-light mt-3 text-sm-center text-lg-start text-md-center text-center">
+                                    Download app from</p>
+
+                                <div class="d-flex mb-5 pb-4 justify-content-center justify-content-lg-start">
                                     <img src="assest/img/img9.webp" width="140" alt="">
                                     <img class="ms-3" src="assest/img/img10.webp" width="140" alt="">
                                 </div>
@@ -428,121 +574,123 @@
 
     <!-- section -->
     <div class="container-fluid fqa-bg">
-        <div class="row">
-            <div class="col-lg-12">
-                <h1 class="mt-5">Explore options near me</h1>
-            </div>
-            <div class="col-lg-12 mt-5">
-                <div class="accordion" id="accordionExample">
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="headingOne">
-                            <button class="accordion-button fs-4" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                Popular cuisines near me
-                            </button>
-                        </h2>
-                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
-                            data-bs-parent="#accordionExample">
-                            <div class="accordion-body">
-                                <div><a href="https://www.zomato.com/bakeries-near-me"
-                                        class="sc-koErNt loxgCr text-decoration-none">Bakeries
-                                        near me</a><span class="sc-gJqsIT grzPPF"></span><a
-                                        href="https://www.zomato.com/bars-near-me"
-                                        class="sc-koErNt loxgCr text-decoration-none">Bars near
-                                        me</a><span class="sc-gJqsIT grzPPF"></span><a
-                                        href="https://www.zomato.com/beverage-shops-near-me"
-                                        class="sc-koErNt loxgCr text-decoration-none">Beverage Shops near me</a><span
-                                        class="sc-gJqsIT grzPPF text-decoration-none"></span><a
-                                        href="https://www.zomato.com/bhojanalya-near-me"
-                                        class="sc-koErNt loxgCr text-decoration-none">Bhojanalya near me</a><span
-                                        class="sc-gJqsIT grzPPF text-decoration-none"></span><a
-                                        href="https://www.zomato.com/cafes-near-me"
-                                        class="sc-koErNt loxgCr text-decoration-none">Cafés near me</a><span
-                                        class="sc-gJqsIT grzPPF text-decoration-none"></span><a
-                                        href="https://www.zomato.com/casual-dining-near-me"
-                                        class="sc-koErNt loxgCr text-decoration-none">Casual Dining near me</a><span
-                                        class="sc-gJqsIT grzPPF text-decoration-none"></span><a
-                                        href="https://www.zomato.com/clubs-near-me"
-                                        class="sc-koErNt loxgCr text-decoration-none">Clubs near me</a><span
-                                        class="sc-gJqsIT grzPPF text-decoration-none"></span><a
-                                        href="https://www.zomato.com/cocktail-bars-near-me"
-                                        class="sc-koErNt loxgCr text-decoration-none">Cocktail Bars near me</a><span
-                                        class="sc-gJqsIT grzPPF"></span><a
-                                        href="https://www.zomato.com/dessert-parlor-near-me"
-                                        class="sc-koErNt loxgCr text-decoration-none">Dessert Parlors near me</a><span
-                                        class="sc-gJqsIT grzPPF text-decoration-none"></span><a
-                                        href="https://www.zomato.com/dhabas-near-me"
-                                        class="sc-koErNt loxgCr text-decoration-none">Dhabas near me</a><span
-                                        class="sc-gJqsIT grzPPF text-decoration-none"></span><a
-                                        href="https://www.zomato.com/fine-dining-near-me"
-                                        class="sc-koErNt loxgCr text-decoration-none">Fine
-                                        Dining near me</a><span class="sc-gJqsIT grzPPF"></span><a
-                                        href="https://www.zomato.com/food-courts-near-me"
-                                        class="sc-koErNt loxgCr text-decoration-none">Food
-                                        Courts near me</a><span class="sc-gJqsIT grzPPF"></span><a
-                                        href="https://www.zomato.com/food-trucks-near-me"
-                                        class="sc-koErNt loxgCr text-decoration-none">Food
-                                        Trucks near me</a><span class="sc-gJqsIT grzPPF"></span><a
-                                        href="https://www.zomato.com/kiosks-near-me"
-                                        class="sc-koErNt loxgCr text-decoration-none">Kiosks
-                                        near me</a><span class="sc-gJqsIT grzPPF"></span><a
-                                        href="https://www.zomato.com/lounges-near-me"
-                                        class="sc-koErNt loxgCr text-decoration-none">Lounges
-                                        near me</a><span class="sc-gJqsIT grzPPF"></span><a
-                                        href="https://www.zomato.com/microbreweries-near-me"
-                                        class="sc-koErNt loxgCr text-decoration-none">Microbreweries near me</a><span
-                                        class="sc-gJqsIT grzPPF"></span><a
-                                        href="https://www.zomato.com/paan-shop-near-me"
-                                        class="sc-koErNt loxgCr text-decoration-none">Paan
-                                        Shop near me</a><span class="sc-gJqsIT grzPPF"></span><a
-                                        href="https://www.zomato.com/quick-bites-near-me"
-                                        class="sc-koErNt loxgCr text-decoration-none text-decoration-none">Quick
-                                        Bites near me</a><span class="sc-gJqsIT grzPPF"></span><a
-                                        href="https://www.zomato.com/sweet-shops-near-me"
-                                        class="sc-koErNt loxgCr text-decoration-none">Sweet
-                                        Shops near me</a></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="mt-5">Explore options near me</h1>
+                </div>
+                <div class="col-lg-12 mt-5">
+                    <div class="accordion" id="accordionExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button fs-4" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    Popular cuisines near me
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <div><a href="https://www.zomato.com/bakeries-near-me"
+                                            class="sc-koErNt loxgCr text-decoration-none">Bakeries
+                                            near me</a><span class="sc-gJqsIT grzPPF"></span><a
+                                            href="https://www.zomato.com/bars-near-me"
+                                            class="sc-koErNt loxgCr text-decoration-none">Bars near
+                                            me</a><span class="sc-gJqsIT grzPPF"></span><a
+                                            href="https://www.zomato.com/beverage-shops-near-me"
+                                            class="sc-koErNt loxgCr text-decoration-none">Beverage Shops near
+                                            me</a><span class="sc-gJqsIT grzPPF text-decoration-none"></span><a
+                                            href="https://www.zomato.com/bhojanalya-near-me"
+                                            class="sc-koErNt loxgCr text-decoration-none">Bhojanalya near me</a><span
+                                            class="sc-gJqsIT grzPPF text-decoration-none"></span><a
+                                            href="https://www.zomato.com/cafes-near-me"
+                                            class="sc-koErNt loxgCr text-decoration-none">Cafés near me</a><span
+                                            class="sc-gJqsIT grzPPF text-decoration-none"></span><a
+                                            href="https://www.zomato.com/casual-dining-near-me"
+                                            class="sc-koErNt loxgCr text-decoration-none">Casual Dining near me</a><span
+                                            class="sc-gJqsIT grzPPF text-decoration-none"></span><a
+                                            href="https://www.zomato.com/clubs-near-me"
+                                            class="sc-koErNt loxgCr text-decoration-none">Clubs near me</a><span
+                                            class="sc-gJqsIT grzPPF text-decoration-none"></span><a
+                                            href="https://www.zomato.com/cocktail-bars-near-me"
+                                            class="sc-koErNt loxgCr text-decoration-none">Cocktail Bars near me</a><span
+                                            class="sc-gJqsIT grzPPF"></span><a
+                                            href="https://www.zomato.com/dessert-parlor-near-me"
+                                            class="sc-koErNt loxgCr text-decoration-none">Dessert Parlors near
+                                            me</a><span class="sc-gJqsIT grzPPF text-decoration-none"></span><a
+                                            href="https://www.zomato.com/dhabas-near-me"
+                                            class="sc-koErNt loxgCr text-decoration-none">Dhabas near me</a><span
+                                            class="sc-gJqsIT grzPPF text-decoration-none"></span><a
+                                            href="https://www.zomato.com/fine-dining-near-me"
+                                            class="sc-koErNt loxgCr text-decoration-none">Fine
+                                            Dining near me</a><span class="sc-gJqsIT grzPPF"></span><a
+                                            href="https://www.zomato.com/food-courts-near-me"
+                                            class="sc-koErNt loxgCr text-decoration-none">Food
+                                            Courts near me</a><span class="sc-gJqsIT grzPPF"></span><a
+                                            href="https://www.zomato.com/food-trucks-near-me"
+                                            class="sc-koErNt loxgCr text-decoration-none">Food
+                                            Trucks near me</a><span class="sc-gJqsIT grzPPF"></span><a
+                                            href="https://www.zomato.com/kiosks-near-me"
+                                            class="sc-koErNt loxgCr text-decoration-none">Kiosks
+                                            near me</a><span class="sc-gJqsIT grzPPF"></span><a
+                                            href="https://www.zomato.com/lounges-near-me"
+                                            class="sc-koErNt loxgCr text-decoration-none">Lounges
+                                            near me</a><span class="sc-gJqsIT grzPPF"></span><a
+                                            href="https://www.zomato.com/microbreweries-near-me"
+                                            class="sc-koErNt loxgCr text-decoration-none">Microbreweries near
+                                            me</a><span class="sc-gJqsIT grzPPF"></span><a
+                                            href="https://www.zomato.com/paan-shop-near-me"
+                                            class="sc-koErNt loxgCr text-decoration-none">Paan
+                                            Shop near me</a><span class="sc-gJqsIT grzPPF"></span><a
+                                            href="https://www.zomato.com/quick-bites-near-me"
+                                            class="sc-koErNt loxgCr text-decoration-none text-decoration-none">Quick
+                                            Bites near me</a><span class="sc-gJqsIT grzPPF"></span><a
+                                            href="https://www.zomato.com/sweet-shops-near-me"
+                                            class="sc-koErNt loxgCr text-decoration-none">Sweet
+                                            Shops near me</a></div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="accordion-item mt-4">
-                        <h2 class="accordion-header" id="headingTwo">
-                            <button class="accordion-button fs-4 collapsed" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                Popular restaurant types near me
-                            </button>
-                        </h2>
-                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
-                            data-bs-parent="#accordionExample">
-                            <div class="accordion-body">
-                                This is the content of section 2.
+                        <div class="accordion-item mt-4">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button fs-4 collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    Popular restaurant types near me
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    This is the content of section 2.
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="accordion-item mt-4">
-                        <h2 class="accordion-header" id="headingThree">
-                            <button class="accordion-button fs-4 collapsed" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                Top Restaurant Chains
-                            </button>
-                        </h2>
-                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
-                            data-bs-parent="#accordionExample">
-                            <div class="accordion-body">
-                                This is the content of section 3.
+                        <div class="accordion-item mt-4">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button fs-4 collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    Top Restaurant Chains
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    This is the content of section 3.
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="accordion-item mt-4 mb-5">
-                        <h2 class="accordion-header" id="headingFour">
-                            <button class="accordion-button fs-4 collapsed" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                                Cities We Deliver To
-                            </button>
-                        </h2>
-                        <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
-                            data-bs-parent="#accordionExample">
-                            <div class="accordion-body">
-                                This is the content of section 4.
+                        <div class="accordion-item mt-4 mb-5">
+                            <h2 class="accordion-header" id="headingFour">
+                                <button class="accordion-button fs-4 collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                    Cities We Deliver To
+                                </button>
+                            </h2>
+                            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    This is the content of section 4.
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -550,87 +698,180 @@
             </div>
         </div>
     </div>
+
     </div>
     <!-- section -->
     <footer>
         <div class="container-fluid footer-background">
-            <div class="row row-cols-xl-5">
-                <div class="col-lg-2 mt-5">
-                    <div class="container">
+            <div class="container">
+                <div class="row row-cols-xl-5 row-cols-md-2 row-cols-sm-2 row-cols-2">
+                    <div class="col-lg-2 mt-5">
 
-                        <img class="mt-4 ms-5" src="assest/img/footer-logo.avif" width="120" alt="">
-                        <h6 class="mt-5 ms-5">ABOUT ZOMATO</h6>
-                        <ul class="footer-ul ms-3">
-                            <li><a href="">who we are</a></li>
-                            <li><a href="">Blog</a></li>
-                            <li><a href="">Work With Us</a></li>
-                            <li><a href="">Investor Relations</a></li>
-                            <li><a href="">Report Fraud</a></li>
-                            <li><a href="">Press Kit</a></li>
-                            <li><a href="">Contact Us</a></li>
+                        <img class="mt-4" src="assest/img/footer-logo.avif" width="120" alt="">
+                        <h6 class="mt-5">ABOUT ZOMATO</h6>
+                        <a class="text-decoration-none footer-a" href="">who we are</a>
+                        <div class="mt-1">
+
+                            <a class="text-decoration-none footer-a" href="">Blog</a>
+                        </div>
+                        <div class="mt-1">
+
+                            <a class="text-decoration-none footer-a" href="">Work With Us</a>
+                        </div>
+                        <div class="mt-1">
+
+                            <a class="text-decoration-none footer-a" href="">Investor Relations</a>
+                        </div>
+                        <div class="mt-1">
+
+                            <a class="text-decoration-none footer-a" href="">Report Fraud</a>
+                        </div>
+                        <div class="mt-1">
+
+                            <a class="text-decoration-none footer-a" href="">Press Kit</a>
+                        </div>
+                        <div class="mt-1">
+
+                            <a class="text-decoration-none footer-a" href="">Contact Us</a>
+                        </div>
+
+                    </div>
+                    <div class="col-lg-2 mt-5"> <br><br>
+                        <h6 class="mt-5">ZOMAVERSE</h6>
+
+                        <a class="text-decoration-none footer-a" href="">Zomato</a>
+                        <div class="mt-1">
+                            <a class="text-decoration-none footer-a" href="">Blinkit</a>
+                        </div>
+                        <div class="mt-1">
+                            <a class="text-decoration-none footer-a" href="">Feeding India</a>
+                        </div>
+                        <div class="mt-1">
+
+                            <a class="text-decoration-none footer-a" href="">Hyperpure</a>
+                        </div>
+                        <div class="mt-1">
+
+                            <a class="text-decoration-none footer-a" href="">Zomaland</a>
+                        </div>
+                        <div class="mt-1">
+
+                            <a class="text-decoration-none footer-a" href="">Weather Union</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 mt-5 footer-responsive-col"> <br><br>
+                        <h6 class="mt-5">FOR RESTAURANTS</h6>
+
+                        <div class="mt-1">
+                            <a class="text-decoration-none footer-a" href="">Partner With Us</a>
+                        </div>
+                        <div class="mt-1">
+                            <a class="text-decoration-none footer-a" href="">Apps For You</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 mt-5 footer-responsive-col"> <br><br>
+                        <h6 class="mt-5">LEARN MORE</h6>
+                        <div class="mt-1">
+                            <a class="text-decoration-none footer-a" href="">Privacy Sitemap</a>
+                        </div>
+                        <div class="mt-1">
+                            <a class="text-decoration-none footer-a" href=""> Security</a>
+                        </div>
+                        <div class="mt-1">
+                            <a class="text-decoration-none footer-a" href="">Terms</a>
+                        </div>
+                        <div class="mt-1">
+                            <a class="text-decoration-none footer-a" href="">Sitemap</a>
+                        </div>
+
+
+                    </div>
+                    <div class="col-lg-12 col-12 mt-5  responsive-footer-section">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-6">
+                                    <img src="assest/img/img10.webp" width="130" height="40" alt="">
+
+                                </div>
+                                <div class="col-6">
+                                    <img src="assest/img/img9.webp" width="130" height="40" alt="">
+
+                                </div>
+                                <div class="col-12 text-center">
+                                    <h6 class="mt-4 text-center">SOCIAL LINKS</h6>
+
+                                </div>
+                                <div class="col-12 mt-3">
+                                    <ul class="footer-ul2 justify-content-center">
+                                        <li>
+                                            <a href="#" class="fa fa-linkedin"></a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="fa fa-instagram"></a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="fa fa-twitter"></a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="fa fa-youtube"></a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="fa fa-facebook"></a>
+                                        </li>
+                                    </ul>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 mt-5 responsive-footer-section2">
+                        <h6 class="mt-5 justify-content-center">SOCIAL LINKS</h6>
+                        <ul class="footer-ul2">
+                            <li>
+                                <a href="#" class="fa fa-linkedin"></a>
+                            </li>
+                            <li>
+                                <a href="#" class="fa fa-instagram"></a>
+                            </li>
+                            <li>
+                                <a href="#" class="fa fa-twitter"></a>
+                            </li>
+                            <li>
+                                <a href="#" class="fa fa-youtube"></a>
+                            </li>
+                            <li>
+                                <a href="#" class="fa fa-facebook"></a>
+                            </li>
                         </ul>
+                        <img src="assest/img/img10.webp" width="130" alt="">
+                        <img class="mt-2" src="assest/img/img9.webp" width="130" alt="">
+
+
                     </div>
 
-                </div>
-                <div class="col-lg-2 mt-5"> <br><br>
-                    <h6 class="mt-5 ms-5">ZOMAVERSE</h6>
 
-                    <ul class="footer-ul ms-3">
-                        <li><a href="">Zomato</a></li>
-                        <li><a href="">Blinkit</a></li>
-                        <li><a href="">Feeding india</a></li>
-                        <li><a href="">Hyperpure</a></li>
-                        <li><a href="">Zomaland</a></li>
-                        <li><a href="">Weather union</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-2 mt-5"> <br><br>
-                    <h6 class="mt-5">FOR RESTAURANTS</h6>
 
-                    <ul class="footer-ul">
-                        <li><a href="">Partner With Us</a></li>
-                        <li><a href="">Apps For You</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-2 mt-5"> <br><br>
-                    <h6 class="mt-5">LEARN MORE</h6>
-
-                    <ul class="footer-ul">
-                        <li><a href="">Privacy</a></li>
-                        <li><a href="">Security</a></li>
-                        <li><a href="">Terms</a></li>
-                        <li><a href="">Sitemap</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-2 mt-5">
-                    <button class="btn btn-outline-dark mt-2"> <img src="" alt=""> India</button>
-                    <button class="btn btn-outline-dark ms-3 mt-2"> <img src="" alt=""> English</button>
-                    <h6 class="mt-5">SOCIAL LINKS</h6>
-                    <ul class="footer-ul2">
-                        <li>
-                            <a href="#" class="fa fa-linkedin"></a>
-                        </li>
-                        <li>
-                            <a href="#" class="fa fa-instagram"></a>
-                        </li>
-                        <li>
-                            <a href="#" class="fa fa-twitter"></a>
-                        </li>
-                        <li>
-                            <a href="#" class="fa fa-youtube"></a>
-                        </li>
-                        <li>
-                            <a href="#" class="fa fa-facebook"></a>
-                        </li>
-                    </ul>
-                    <img src="assest/img/img10.webp" width="130" alt="">
-                    <img class="mt-2" src="assest/img/img9.webp" width="130" alt="">
 
 
                 </div>
-
+                <hr class="mt-4">
+                <div class="container">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <p>By continuing past this page, you agree to our Terms of Service, Cookie Policy,
+                                    Privacy
+                                    Policy and Content Policies. All trademarks are properties of their respective
+                                    owners.
+                                    2008-2024 © Zomato™ Ltd. All rights reserved.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
+
+
     </footer>
 
 
@@ -649,7 +890,20 @@
     </script>
 
 
+    <script>
+        document.getElementById('show-all-box').addEventListener('click', function () {
+            var hiddenBoxes = document.querySelectorAll('.hidden-box');
+            var container = document.getElementById('box-container');
+            var showAllContainer = document.getElementById('show-all-container');
 
+            hiddenBoxes.forEach(function (box) {
+                box.style.display = 'block';
+                container.appendChild(box); // Append each revealed box to the container
+            });
+
+            container.appendChild(showAllContainer); // Move the "Show All" box to the end
+        });
+    </script>
 
 
 
