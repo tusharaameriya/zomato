@@ -1,8 +1,14 @@
+body {
+    font-family: Okra, Helvetica, sans-serif;
+    scroll-behavior: smooth;
+}
+
 .hero {
     background-image: url('/assest/img/banner.png');
     background-size: cover;
     background-repeat: no-repeat;
     padding-bottom: 80px;
+    background-position: center;
 
 }
 
@@ -149,13 +155,7 @@ input[type="tel"] {
     background: rgb(248, 248, 248)
 }
 
-.footer-ul li {
-    list-style: none;
-    padding: 3px;
-}
-
-.footer-ul li a {
-    text-decoration: none;
+.footer-a {
     color: rgb(105, 105, 105);
 
 }
@@ -212,7 +212,9 @@ input[type="tel"] {
 }
 
 .input-login {
-    border: 1px solid !important;
+    padding: 8px;
+    border: 2px solid rgba(128, 128, 128, 0.238) !important;
+
 }
 
 .truncate {
@@ -221,9 +223,75 @@ input[type="tel"] {
     text-overflow: ellipsis;
 }
 
+.send-otp-button {
+    padding: 8px;
+}
+
+.line-with-text {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.line-with-text::before,
+.line-with-text::after {
+    content: "";
+    flex: 1;
+    border-bottom: 1px solid #00000031;
+}
+
+.line-with-text::before {
+    margin-right: 0px;
+}
+
+.line-with-text::after {
+    margin-left: 0px;
+}
+
+.line-with-text span {
+    padding: 0 10px;
+    /* font-weight: ; */
+    font-size: 18px;
+}
+
+.email-box {
+    padding: 8px;
+    border: 2px solid rgba(128, 128, 128, 0.238) !important;
+
+}
+
+.google-text {
+    font-weight: 500;
+}
+
+.check-box {
+    width: 20px;
+}
+
+.singup-content {
+    font-size: 13px;
+}
+
+.hidden-box {
+    display: none;
+}
+
+.show-all-hover:hover {
+    cursor: pointer;
+}
+
 @media (min-width: 992px) {
     .responsive-box2 {
         display: none !important;
+    }
+
+    .get-app2 {
+        display: none;
+    }
+
+    .responsive-footer-section {
+        display: none;
     }
 }
 
@@ -235,6 +303,30 @@ input[type="tel"] {
 
     .responsive-box2 {
         display: block !important;
+    }
+
+    .forn-content {
+        width: auto !important;
+    }
+
+    .get-app {
+        display: none;
+    }
+
+    .responsive-box-form-img {
+        margin-top: -90px !important;
+    }
+
+    .footer-responsive-col {
+        margin-top: -60px !important;
+    }
+
+    .responsive-footer-section {
+        display: inline;
+    }
+
+    .responsive-footer-section2 {
+        display: none;
     }
 }
 
@@ -260,7 +352,8 @@ input[type="tel"] {
     .card1 {
         height: 210px !important;
     }
-    .heading5{
+
+    .heading5 {
         font-size: 30px;
         margin-top: -50px;
     }
@@ -292,7 +385,15 @@ input[type="tel"] {
         height: 285px;
     }
 
-    .heading5{
+    .heading5 {
         font-size: 22px;
+    }
+
+    .collections-content-responsive {
+        font-size: 16px !important;
+    }
+
+    .heading p {
+        font-size: 25px !important;
     }
 }
